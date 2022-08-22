@@ -187,3 +187,36 @@ select {
     font-weight: 700;
     color: hsl( var(--clr-white) / .25);
 }
+
+/* ------------------- */
+/*     Components      */
+/* ------------------- */
+
+.large-button {
+    display: grid;
+    position: relative;
+    place-items: center;
+    padding: 0 2em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    background: hsl( var(--clr-white) / .15);
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
