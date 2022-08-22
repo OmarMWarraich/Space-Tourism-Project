@@ -92,22 +92,44 @@
                 <h2 class="numbered-title"><span>03</span> Interactive elements</h2>
                 
                 <!-- navigation -->
-                <div></div>
+                <div>
+                    <nav>
+                        <ul class="primary-navigation underline-indicators flex">
+                            <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a>
+                            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a>
+                            <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a>
+                        </ul>
+                    </nav>
+                </div>
                 
                 <div class="flex">
-                    <div style="margin-top: 5rem; margin-left: 5rem; margin-bottom: 5rem;">
+                    <div style="margin-top: 5rem">
                         <!-- explore button -->
                         <a href="#" class="large-button uppercase ff-serif fs-600 text-dark bg-white">Explore</a>
                     </div>
                     
-                    <div style="margin-bottom: 50vh;" >
+                    <div class="flow" style="margin-bottom: 50vh; --flow-space: 4rem">
                         <!-- Tabs -->
-                        
+                        <div class="tab-list underline-indicators flex">
+                            <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
+                            <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
+                            <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
+                        </div>
                         
                         <!-- Dots -->
-                        
+                        <div class="dot-indicators flex">
+                            <button aria-selected="true"><span class="sr-only">Slide title</span></button>
+                            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                            <button aria-selected="false"><span class="sr-only">Slide title</span></button>
+                        </div>
                         
                         <!-- Numbers -->
+
+                        <div class="num-indicators dot-indicators flex">
+                            <button aria-selected="true"><span >01</span></button>
+                            <button aria-selected="false"><span>02</span></button>
+                            <button aria-selected="false"><span>03</span></button>
+                        </div>
                     </div>
                 </div>
                 
@@ -116,6 +138,6 @@
             
         </div>
         
-        <script src="index.pack.js"></script>
+        <script src="index.js"></script>
     </body>
 </html> 
