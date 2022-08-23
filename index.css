@@ -125,6 +125,24 @@ select {
     max-width: 80rem;
 }
 
+.grid-container {
+    display: grid;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+}
+
+.grid-container *:first-child {
+    grid-column: 2;
+    outline: 1px solid red;
+}
+
+.grid-container *:last-child {
+    grid-column: 3;
+        outline: 1px solid yellow;
+
+}
+
+
 .sr-only {
   position: absolute; 
   width: 1px;
@@ -188,8 +206,9 @@ select {
     color: hsl( var(--clr-white) / .25);
 }
 
+
 /* ------------------- */
-/*     Components      */
+/* Compontents         */
 /* ------------------- */
 
 .large-button {
@@ -197,7 +216,7 @@ select {
     z-index: 1;
     display: inline-grid;
     place-items: center;
-    padding: 0 2em;
+    padding: 0 2rem;
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
@@ -206,15 +225,15 @@ select {
 .large-button::after {
     content: '';
     position: absolute;
-    background: hsl( var(--clr-white) / .15);
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
     z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .1);
+    border-radius: 50%;
     opacity: 0;
     transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
-
+ 
 .large-button:hover::after,
 .large-button:focus::after {
     opacity: 1;
@@ -233,25 +252,25 @@ select {
     text-decoration: none;
 }
 
-.primary-navigation a > span {
+.primary-navigation a span {
     font-weight: 700;
     margin-right: .5em;
 }
 
-.underline-indicators > * {
+.underline-indicators * {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
+.underline-indicators *:hover,
+.underline-indicators *:focus {
     border-color: hsl( var(--clr-white) / .5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
+.underline-indicators .active,
+.underline-indicators [aria-selected="true"] {
     color: hsl( var(--clr-white) / 1);
     border-color: hsl( var(--clr-white) / 1); 
 }
@@ -260,7 +279,7 @@ select {
     --gap: 2rem;
 }
 
-.dot-indicators > * {
+.dot-indicators * {
     cursor: pointer;
     border: 0;
     border-radius: 50%;
@@ -268,16 +287,16 @@ select {
     background-color: hsl( var(--clr-white) / .25);
 }
  
-.dot-indicators > *:hover,
-.dot-indicators > *:focus {
+.dot-indicators *:hover,
+.dot-indicators *:focus { 
     background-color: hsl( var(--clr-white) / .5);
 }
 
-.dot-indicators > [aria-selected="true"] {
+.dot-indicators [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
 }
 
-.num-indicators {
-    place-items: center;
-    border-radius: 50%;
+.logo {
+    width: 10%;
+    height: 10%;
 }
