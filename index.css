@@ -208,7 +208,7 @@ select {
 
 
 /* ------------------- */
-/* Compontents         */
+/* Components         */
 /* ------------------- */
 
 .large-button {
@@ -240,10 +240,20 @@ select {
     transform: scale(1.5);
 }
 
+.primary-header {
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
 .primary-navigation {
     --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap);
     padding: 0;
     margin: 0;
 }
@@ -264,14 +274,13 @@ select {
     border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
 }
 
-.underline-indicators *:hover,
 .underline-indicators *:focus {
-    border-color: hsl( var(--clr-white) / .5);
+    border-color: hsl( var(--clr-white) / .1);
 }
 
 .underline-indicators .active,
 .underline-indicators [aria-selected="true"] {
-    color: hsl( var(--clr-white) / 1);
+    /* color: hsl( var(--clr-white) / 1); */
     border-color: hsl( var(--clr-white) / 1); 
 }
 
